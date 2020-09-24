@@ -28,9 +28,14 @@ body{
 
 /* HEADER */
 
+.imagen-header{
+    width: 100%;
+    height: auto;
+}
+
 .container-banner{
     height: 400px;
-    width: 1000px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,11 +50,20 @@ body{
 
 .aside-filtro{
     background-color: #fafafa;
+
+}
+
+.sector-filtro{
     width: 20%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+    margin-left: 100px;
 }
 
 .filtro{
-    padding-left: 10px;
+    /* padding-left: 10px; */
 }
 .contenedor-de-checkbox{
 
@@ -66,45 +80,43 @@ body{
 /* SEGUNDO HEADER  */
 
 .header-ver-productos{
+    display: flex;
     width: 80%;
-    height: auto;
+    height: 100px;
     background-color: white;
+    position: absolute;
 }
 
 /* SECCIONES*/
 
-.dos-secciones{
+.inicio{
+    width: 100%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    align-content: space-between;
+    margin-top: 100px;
 }
+
 
 /* SECCION DE PRODUCTOS*/
 
 .seccion-productos{
     display: flex;
-    align-items: flex-end;
+    justify-content: flex-end;
     width: 80%;
     height: auto;
 }
 
 
 .contenedor-de-productos{
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
+    margin-top: 100px;
     display: flex;
-    align-content: center;
-    justify-content: center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
 .producto{
-    background-color: #fafafa;
+    background-color: white;
     border: 1px #dddfe5 solid;
-    border-radius: 10px;
     width: 300px;
     height: 500px;
     box-sizing: border-box;
