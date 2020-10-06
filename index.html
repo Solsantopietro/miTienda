@@ -11,52 +11,52 @@
 </head>
 
 <body>
-    <nav class="navegacion">
-        <p class="titulo-shop">SOL SHOP</p>
+    <nav class="nav">
+        <p class="title-shop">SOL SHOP</p>
         <div>
             <i class="fas fa-shopping-cart"></i>
-            <button class="carrito">carrito</button>
+            <button class="cart">carrito</button>
         </div>
 
     </nav>
-    <header class="imagen-header">
+    <header class="image-header">
         <div class="container-banner">
             <h1 class="main-title">TITULO</h1>
         </div>
     </header>
-    <div class="inicio">
+    <div class="home">
         <div class="sector-filtro">
             <aside class="aside-filtro">
                 <div>
                     <h2>Filtro</h2>
                     <p>Limpiar</p>
                 </div>
-                <form class="filtro">
+                <form class="filter">
                     <div>
                         <label for="busqueda">Busqueda
-                            <input type="text" name="busqueda" placeholder="Buscar producto" />
+                            <input type="text" name="busqueda" id="filter-name" placeholder="Buscar producto" />
                         </label>
                     </div>
-                    <div class="categoria">
+                    <div class="category">
                         <h2>Categoria</h2>
-                        <div class="contenedor-de-checkbox">
+                        <div class="container-checkbox">
                             <label for="">
-                                <input type="checkbox" name="categoria" class="checkbox-producto" /> Netbook
+                                <input type="checkbox" name="category" class="checkbox-product" /> Netbook
                             </label>
                             <label for="">
-                                <input type="checkbox" name="categoria" class="checkbox-producto" /> Celulares
+                                <input type="checkbox" name="category" class="checkbox-product" /> Celulares
                             </label>
                             <label for="">
-                                <input type="checkbox" name="categoria" class="checkbox-producto" /> Consolas
+                                <input type="checkbox" name="category" class="checkbox-product" /> Consolas
                             </label>
                             <label for="">
-                                <input type="checkbox" name="categoria" class="checkbox-producto" /> Televisor
+                                <input type="checkbox" name="category" class="checkbox-product" /> Televisor
                             </label>
                             <label for="">
-                                <input type="checkbox" name="categoria" class="checkbox-producto" /> Tablet
+                                <input type="checkbox" name="category" class="checkbox-product" /> Tablet
                             </label>
                             <label for="">
-                                <input type="checkbox" name="categoria" class="checkbox-producto" /> Camaras
+                                <input type="checkbox" name="category" class="checkbox-product" /> Camaras
                             </label>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
                 </form>
             </aside>
         </div>
-        <div class="seccion-productos">
+        <div class="sector-product">
             <div class="header-ver-productos">
                 <header>
                     <p>Mostrando 12 prodcutos</p>
@@ -122,104 +122,104 @@
                     <i class="fas fa-list"></i>
                 </header>
             </div>
-            <div class="seccion-productos">
+            <div class="section-product">
                 <section>
-                    <div class="contenedor-de-productos">
-                        <div class="producto">
-                            <img class="imagen-producto" src="./imagenes-de-productos/celularXiaomi.jpg">
-                            <div class="contenido-de-tarjeta">
+                    <div class="container-product">
+                        <div class="card hidden" data-name="celular xiaomi">
+                            <img class="image-product" src="./imagenes-de-productos/celularXiaomi.jpg">
+                            <div class="product">
                                 <h3>Celular Xiaomi</h3>
                                 <p>$9999</p>
                                 <button class="boton-comprar">COMPRAR</button>
                             </div>
                         </div>
-                        <div class="producto">
-                            <img class="imagen-producto" src="./imagenes-de-productos/playStation4.jpg">
-                            <div class="contenido-de-tarjeta">
+                        <div class="card hidden" data-name="playstation 4">
+                            <img class="image-product" src="./imagenes-de-productos/playStation4.jpg">
+                            <div class="product">
                                 <h3>PlayStation 4</h3>
                                 <p>$9999</p>
                                 <button class="boton-comprar">COMPRAR</button>
                             </div>
                         </div>
-                        <div class="producto">
-                            <img class="imagen-producto" src="./imagenes-de-productos/camaraNikon.jpg">
-                            <div class="contenido-de-tarjeta">
+                        <div class="card hidden" data-name="camara nikon">
+                            <img class="image-product" src="./imagenes-de-productos/camaraNikon.jpg">
+                            <div class="product">
                                 <h3>Camara Nikon</h3>
                                 <p>$9999</p>
                                 <button class="boton-comprar">COMPRAR</button>
                             </div>
                         </div>
-                        <div class="producto">
-                            <img class="imagen-producto" src="./imagenes-de-productos/headphonesSony.png">
-                            <div class="contenido-de-tarjeta">
+                        <div class="card hidden" data-name="headphones sony">
+                            <img class="image-product" src="./imagenes-de-productos/headphonesSony.png">
+                            <div class="product">
                                 <h3>Headphones Sony</h3>
                                 <p>$9999</p>
                                 <button class="boton-comprar">COMPRAR</button>
                             </div>
                         </div>
-                        <div class="producto">
-                            <img class="imagen-producto" src="./imagenes-de-productos/nintendoSwitch.jpg">
-                            <div class="contenido-de-tarjeta">
+                        <div class="card hidden" data-name="nintendo switch">
+                            <img class="image-product" src="./imagenes-de-productos/nintendoSwitch.jpg">
+                            <div class="product">
                                 <h3>Nintendo Switch</h3>
                                 <p>$9999</p>
                                 <button class="boton-comprar">COMPRAR</button>
                             </div>
                         </div>
-                        <div class="producto">
-                            <img class="imagen-producto" src="./imagenes-de-productos/netbookAsus.png">
-                            <div class="contenido-de-tarjeta">
+                        <div class="card hidden" data-name="notebook asus">
+                            <img class="image-product" src="./imagenes-de-productos/netbookAsus.png">
+                            <div class="product">
                                 <h3>Notebook Asus</h3>
                                 <p>$9999</p>
                                 <button class="boton-comprar">COMPRAR</button>
                             </div>
                         </div>
-                        <div class="producto">
-                            <img class="imagen-producto" src="./imagenes-de-productos/netbookMSI.png">
-                            <div class="contenido-de-tarjeta">
+                        <div class="card hidden" data-name="notebook msi">
+                            <img class="image-product" src="./imagenes-de-productos/netbookMSI.png">
+                            <div class="product">
                                 <h3>Notebook MSI</h3>
                                 <p>$9999</p>
                             </div>
                             <button class="boton-comprar">COMPRAR</button>
                         </div>
-                        <div class="producto">
-                            <img class="imagen-producto" src="./imagenes-de-productos/macBook.png">
-                            <div class="contenido-de-tarjeta">
+                        <div class="card hidden" data-name=macbook"">
+                            <img class="image-product" src="./imagenes-de-productos/macBook.png">
+                            <div class="product">
                                 <h3>MacBook</h3>
                                 <p>$9999</p>
                                 <button class="boton-comprar">COMPRAR</button>
                             </div>
                         </div>
-                        <div class="producto">
-                            <img class="imagen-producto" src="./imagenes-de-productos/headphonesPhilips.png">
-                            <div class="contenido-de-tarjeta">
+                        <div class="card hidden" data-name="headshot philips">
+                            <img class="image-product" src="./imagenes-de-productos/headphonesPhilips.png">
+                            <div class="product">
                                 <h3>Headshot philips</h3>
                                 <p>$9999</p>
                                 <button class="boton-comprar">COMPRAR</button>
                             </div>
 
                         </div>
-                        <div class="producto">
-                            <img class="imagen-producto" src="./imagenes-de-productos/iphone.jpg">
-                            <div class="contenido-de-tarjeta">
+                        <div class="card hidden" data-name="iphone x">
+                            <img class="image-product" src="./imagenes-de-productos/iphone.jpg">
+                            <div class="product">
                                 <h3>Iphone X</h3>
                                 <p>$9999</p>
                                 <button class="boton-comprar">COMPRAR</button>
                             </div>
                         </div>
-                        <div class="producto">
-                            <img class="imagen-producto" src="./imagenes-de-productos/xboxOneX.jpg">
-                            <div class="contenido-de-tarjeta">
+                        <div class="card hidden" data-name="xbox one">
+                            <img class="image-product" src="./imagenes-de-productos/xboxOneX.jpg">
+                            <div class="product">
                                 <h3>Xbox One</h3>
                                 <p>$9999</p>
                                 <button class="boton-comprar">COMPRAR</button>
                             </div>
                         </div>
-                        <div class="producto">
-                            <img class="imagen-producto" src="./imagenes-de-productos/mouseGamer.jpg">
-                            <div class="contenido-de-tarjeta">
+                        <div class="card hidden" data-name="mouse gamer">
+                            <img class="image-product" src="./imagenes-de-productos/mouseGamer.jpg">
+                            <div class="product">
                                 <h3>Mouse Gamer</h3>
                                 <p>$9999</p>
-                                <button class="boton-comprar">COMPRAR</button>
+                                <button class="buttom-buy">COMPRAR</button>
                             </div>
                         </div>
                     </div>
@@ -230,7 +230,7 @@
     </div>
     <footer>
         <div class="container-footer">
-            <nav id="contactos">
+            <nav id="contact">
                 <ul class="icon-footer">
                     <li>
                         <a href="https://github.com/Solsantopietro" class="icon">
@@ -246,10 +246,10 @@
                     </li>
                 </ul>
             </nav>
-            <p class="parrafo-footer">Hecho con ❤️ y estres</p>
+            <p class="footer-text">Hecho con ❤️ y estres</p>
         </div>
     </footer>
-    <script></script>
+    <script src="index.js"></script>
 </body>
 
 </html>

@@ -11,8 +11,7 @@ body{
 
 /* NAV */
 
-.navegacion{
-    background-color: yellow;
+.nav{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,14 +20,14 @@ body{
     margin: 0;
 }
 
-.titulo-shop{
+.title-shop{
     padding-right: 1300px;
 
 }
 
 /* HEADER */
 
-.imagen-header{
+.image-header{
     width: 100%;
     height: auto;
 }
@@ -62,14 +61,14 @@ body{
     margin-left: 100px;
 }
 
-.filtro{
+.filter{
     /* padding-left: 10px; */
 }
-.contenedor-de-checkbox{
+.container-checkbox{
 
 }
 
-.checkbox-producto{
+.checkbox-product{
     padding-right: 200px;
 }
 
@@ -89,7 +88,7 @@ body{
 
 /* SECCIONES*/
 
-.inicio{
+.home{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -99,7 +98,7 @@ body{
 
 /* SECCION DE PRODUCTOS*/
 
-.seccion-productos{
+.section-product{
     display: flex;
     justify-content: flex-end;
     width: 80%;
@@ -107,14 +106,14 @@ body{
 }
 
 
-.contenedor-de-productos{
+.container-product{
     margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.producto{
+.card{
     background-color: white;
     border: 1px #dddfe5 solid;
     width: 300px;
@@ -128,23 +127,20 @@ body{
     margin: 10px;
 }
 
-.imagen-producto{
+.image-product{
     width: 100%;
     height: auto;
 }
 
-.contenido-de-tarjeta{
+.product{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.contenedor-tarjetas>div{
-    background-color: red;
-    border: 1px solid black;
-    margin: 5px;
-    flex: 1 1 200px;
+.hidden{
+    display: none;
 }
 
 /* FOOTER */
