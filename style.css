@@ -1,4 +1,4 @@
-body{
+body {
     color: #2e2e31;
     display: flex;
     flex-direction: column;
@@ -11,91 +11,96 @@ body{
 
 /* NAV */
 
-.nav{
+.nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    align-content: space-between;
-    margin: 0;
-}
-
-.title-shop{
-    padding-right: 1300px;
-    margin-left: 5px;
-
+    width: 100%;
+    padding: 10px 20px;
+    max-width: 1400px;
 }
 
 /* HEADER */
 
-.image-header{
+.image-header {
     width: 100%;
     height: auto;
 }
 
-.container-banner{
-    height: 400px;
+.container-banner {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("./imagenes-de-productos/portada.jpg");
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("./imagenes-de-productos/portada.jpg");
+    background-position: center;
+    min-height: 300px;
 }
 
-.main-title{
+.main-title {
     color: white;
 }
 
 /* ASIDE */
 
-.sector-filtro{
+.sector-filtro {
     display: flex;
     margin-left: 100px;
     padding: 0 35px 15px;
 }
 
-.filter{
+.filter {
     /* padding-left: 10px; */
     background-color: #f5f5f5;
 }
+
 .filter label {
     display: flex;
     align-items: center;
     margin: 5px;
     padding-left: 10px;
 }
-.filter label i{
-    position: absolute;
+
+.filter label i {
     left: 250px;
     margin-bottom: 5px;
 }
-.container-checkbox{
+
+.container-checkbox {
     display: flex;
     flex-direction: column;
 }
 
-.checkbox-product{
+.checkbox-product {
     padding-right: 200px;
 }
 
-.fa-star{
-    color: yellow;
-    display: flex;
-    
-}
-
-.score{
+.fa-star {
+    color: #fbc02d;;
     display: flex;
 }
 
-.score .fa-star{
+.score {
+    display: flex;
+    flex-direction: column;
+}
+
+.score div {
+    display: flex;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.score .fa-star {
     display: flex;
     align-content: space-between;
+    align-items: center;
+    font-size: 15px;
 }
 
 /* SEGUNDO HEADER  */
 
-.header-ver-productos{
+.header-ver-productos {
     display: flex;
     width: 80%;
     height: 100px;
@@ -105,7 +110,7 @@ body{
 
 /* SECCIONES*/
 
-.home{
+.home {
     width: 100%;
     display: flex;
     margin-top: 100px;
@@ -113,25 +118,23 @@ body{
     flex-grow: 1;
 }
 
-
 /* SECCION DE PRODUCTOS*/
 
-.section-product{
+.section-product {
     display: flex;
     justify-content: flex-end;
     width: 80%;
     height: auto;
 }
 
-
-.container-product{
+.container-product {
     margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.card{
+.card {
     background-color: white;
     border: 1px #dddfe5 solid;
     width: 300px;
@@ -145,19 +148,19 @@ body{
     margin: 10px;
 }
 
-.image-product{
+.image-product {
     width: 100%;
     height: auto;
 }
 
-.product{
+.product {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
@@ -166,30 +169,35 @@ body{
     font-size: 15px;
     font-family: 'Montserrat', sans-serif;
 }
+
 .page-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .fa-paw {
     font-size: larger;
     margin-bottom: 5px;
 }
+
 .filter-top {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #f5f5f5;
-
 }
+
 .clean-option {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .clean-option p {
     margin-left: 5px;
 }
+
 .search-product {
     border: 0;
     border-bottom: 2px solid #546e7a;
@@ -198,3 +206,30 @@ body{
 
 /* FOOTER */
 
+footer {
+    font-size: 14px;
+    background: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 10px 30px;
+    margin-top: 80px;
+}
+
+.container-footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 0px;
+}
+
+.container-footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.container-footer li {
+    color: black;
+    font-size: 35px;
+}
