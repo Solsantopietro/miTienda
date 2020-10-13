@@ -102,10 +102,29 @@ body {
 
 .header-ver-productos {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 80%;
+    max-width: 1000px;
     height: 100px;
     background-color: white;
     position: absolute;
+}
+
+.header-ver-productos p {
+    padding-left: 25px;
+}
+
+.header-ver-productos div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 25px;
+}
+
+.header-ver-productos i {
+    padding-left: 10px;
+    font-size: 20px;
 }
 
 /* SECCIONES*/
