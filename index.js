@@ -1,18 +1,28 @@
 const cards = document.querySelectorAll('.card');
 const checkboxFilter = document.querySelectorAll('.checkbox-product');
 const filterSearch = document.querySelector('#filter-name');
+const filterScore = document.querySelectorAll(".checkbox-score");
 
-filterSearch.oninput = () =>{
-    for (let card of cards){
-        if (card.dataset.name.includes(filterSearch.value.toLowerCase())){
-        card.classList.remove('hidden')
-        } else {
-        card.classList.add('hidden')
-
+for (let score of filterScore) {
+    score.oninput = () => {
+        if (uncheckedScore()) {
+            showAllCards()
+        }
+        else {
+            checkboxScore()
+        }
     }
+}
+
+filterSearch.oninput = () => {
+    for (let card of cards) {
+        if (card.dataset.name.includes(filterSearch.value.toLowerCase())) {
+            card.classList.remove('hidden')
+        } else {
+            card.classList.add('hidden')
+        }
     }
 };
-
 
 const initialize = () => {
     for (let card of cards) {
@@ -22,7 +32,6 @@ const initialize = () => {
 }
 
 initialize()
-
 
 for (let checkbox of checkboxFilter) {
     checkbox.oninput = () => {
@@ -39,9 +48,9 @@ for (let checkbox of checkboxFilter) {
 const filterCheckbox = () => {
     for (let card of cards) {
         card.classList.add('hidden');
-        for (let filtro2 of checkboxFilter) {
-            if (filtro2.checked) {
-                if (filtro2.value === card.dataset.type) {
+        for (let checkbox of checkboxFilter) {
+            if (checkbox.checked) {
+                if (checkbox.value === card.dataset.type) {
                     card.classList.remove('hidden');
                 }
             }
@@ -62,4 +71,26 @@ const uncheckedCategories = () => {
         }
     }
     return true
+}
+
+const uncheckedScore = () => {
+    for (let score of filterScore) {
+        if (score.checked) {
+            return false
+        }
+    }
+    return true
+}
+
+const checkboxScore = () => {
+    for (let card of cards) {
+        card.classList.add('hidden');
+        for (let score of filterScore) {
+            if (score.checked) {
+                if (score.value === card.dataset.score) {
+                    card.classList.remove('hidden');
+                }
+            }
+        }
+    }
 }
