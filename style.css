@@ -224,12 +224,17 @@ footer {
     padding-left: 0px;
 }
 
+.container-footer p {
+    font-size: 20px;
+    color: #00000094;
+
+}
+
 .container-footer a {
     text-decoration: none;
-    color: black;
+    color: #00000094;
 }
 
 .container-footer li {
-    color: black;
     font-size: 35px;
 }
