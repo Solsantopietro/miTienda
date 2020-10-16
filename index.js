@@ -1,140 +1,128 @@
 const cards = document.querySelectorAll('.card');
-const checkboxFilter = document.querySelectorAll('.checkbox-product');
-const filterSearch = document.querySelector('#filter-name');
-const filterScore = document.querySelectorAll(".checkbox-score");
+const productFilters = document.querySelectorAll('.checkbox-product');
+const textInputFilter = document.querySelector('#filter-name');
+const scoreFilters = document.querySelectorAll(".checkbox-score");
+const buttonClean = document.querySelector(".clean-option")
 
-// PUNTUACION DE ESTRELLITAS
+// CARDS
 
-const scoreCheckbox = () => {
-    for (let score of filterScore) {
-        score.oninput = () => {
-            if (uncheckedScore()) {
-                showAllCards()
-            }
-            else {
-                checkboxScore()
-            }
-        }
-    }
+const showCard = (card) => {
+    card.classList.remove("hidden")
 }
 
-scoreCheckbox()
-
-//BUSQUEDA POR TEXTO 
-
-const textSearch = () => {
-    filterSearch.oninput = () => {
-        for (let card of cards) {
-            if (card.dataset.name.includes(filterSearch.value.toLowerCase())) {
-                card.classList.remove('hidden')
-            } else {
-                card.classList.add('hidden')
-            }
-        }
-    };
+const hideCard = (card) =>{
+    card.classList.add("hidden")
 }
 
-textSearch()
-
-//INICIALIZO REMOVIENDO EL HIDDEN 
-
-const initialize = () => {
+const showAllCards = () =>{
     for (let card of cards) {
-        card.classList.remove('hidden');
+        showCard(card)
     }
+}
 
+const filterCards = () =>{
+    if (thereIsAFilter()) {
+        for(let card of cards) {
+            applyFilter(card)
+        }
+    }else{
+        showAllCards()
+    }
+}
+
+// SCORE
+
+const thereIsScoreFilter = () =>{
+    for (let scoreFilter of scoreFilters){
+        if (scoreFilter.checked) return true
+    }
+    return false
+}
+
+const pasaFiltroScore = (score) =>{
+    if (thereIsScoreFilter()){
+        for (let scoreFilter of scoreFilters){
+            if (scoreFilter.checked && scoreFilter.value === score){
+                return true
+            }
+        }
+        return false
+    }else{
+        return true
+    }
+}
+
+// PRODUCT FILTER
+
+const thereIsAProductFilter = () =>{
+    for (let productFilter of productFilters){
+        if (productFilter.checked){
+            return true
+        }
+    }
+    return false
+}
+
+const pasaFiltroDeProductos = (productType) => {
+    if (thereIsAProductFilter()){
+        for (let productFilter of productFilters){
+            if (productFilter.checked && productFilter.value === productType){
+                return true
+            }
+        }
+        return false
+    }else{
+        return true 
+    }
+}
+
+// TEXT FILTER
+
+const thereIsTextFilter = () =>{
+    return (textInputFilter.value !== "")
+}
+
+const pasaFiltroDeTexto = (productName)=> {
+    if (thereIsTextFilter()){
+        if (productName.includes(textInputFilter.value.toLowerCase())){
+            return true
+        }
+        return false
+    }else{
+        return true
+    }
+}
+
+// GENERAL
+
+const applyFilter = (card) => {
+    if (pasaFiltroScore(card.dataset.score) && pasaFiltroDeProductos(card.dataset.type) && pasaFiltroDeTexto(card.dataset.name)){
+        showCard(card)
+    }else{
+        hideCard(card)
+    }
+}
+
+const thereIsAFilter = () => {
+    return thereIsScoreFilter && thereIsAProductFilter && thereIsTextFilter
+}
+
+const initialize = () =>{
+    showAllCards()
+    console.log("initializing score filters")
+    for (let scoreFilter of scoreFilters){
+        scoreFilter.oninput = () => {
+            filterCards()
+        }
+    }
+    for (let productFilter of productFilters){
+        productFilter.oninput = () =>{
+            filterCards()
+        }
+    }
+    textInputFilter.oninput = () =>{
+            filterCards()
+    }
 }
 
 initialize()
-
-// RECORRO LOS CHECKBOX
-
-const loopCheckbox = () => {
-    for (let checkbox of checkboxFilter) {
-        checkbox.oninput = () => {
-            if (uncheckedCategories()) {
-                showAllCards()
-            }
-            else {
-                filterCheckbox()
-            }
-        }
-
-    }
-}
-
-loopCheckbox()
-
-// RECORRO LAS TARJETAS Y CHECKBOX
-
-const filterCheckbox = () => {
-    for (let card of cards) {
-        card.classList.add('hidden');
-        for (let checkbox of checkboxFilter) {
-            if (checkbox.checked) {
-                if (checkbox.value === card.dataset.type) {
-                    card.classList.remove('hidden');
-                }
-            }
-        }
-    }
-}
-
-
-
-
-// MUESTRO TODAS LAS TARJETAS
-
-const showAllCards = () => {
-    for (let card of cards) {
-        card.classList.remove("hidden")
-    }
-}
-
-
-// ME FIJO SI HAY ALGO DESCHEQUEADO
-
-const uncheckedCategories = () => {
-    for (let checkbox of checkboxFilter) {
-        if (checkbox.checked) {
-            return false
-        }
-    }
-    return true
-}
-
-// ME FIJO SI HAY ALGUNA ESTRELLA DESCHEQUEADA
-
-const uncheckedScore = () => {
-    for (let score of filterScore) {
-        if (score.checked) {
-            return false
-        }
-    }
-    return true
-}
-
-// RECORRO LAS TARJETAS Y CHECKBOX DE ESTRELLAS
-
-const checkboxScore = () => {
-    for (let card of cards) {
-        card.classList.add('hidden');
-        for (let score of filterScore) {
-            if (score.checked) {
-                if (score.value === card.dataset.score) {
-                    card.classList.remove('hidden');
-                }
-            }
-        }
-    }
-}
-
-
-// FUNCION ENTERA
-
-
-// const pasaTodosLosFiltros = (card) => {
-//     if (textSearch(card) && loopCheckbox(card) && scoreCheckbox(card)) {
-//         return true
-//     }
-// }
