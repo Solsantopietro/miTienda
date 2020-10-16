@@ -16,7 +16,6 @@ const cleaner = () => {
         }
         textInputFilter.value = ""
         showAllCards()
-
     }
 }
 

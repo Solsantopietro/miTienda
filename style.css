@@ -8,6 +8,15 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
 }
+/* BORRADOR ARCHIV */
+
+.cart-buy {
+    background-color: red;
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+
+}
 
 /* NAV */
 
@@ -106,6 +115,18 @@ body {
     align-items: center;
     height: 100px;
     background-color: white;
+}
+
+.header-ver-productos button {
+    display: none;
+    border: none;
+    width: 100px;
+    background-color: white;
+    font-size: 15px;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+
 }
 
 .header-ver-productos p {
@@ -219,7 +240,7 @@ section {
 
 .fa-paw {
     font-size: larger;
-    margin-bottom: 5px;
+    
 }
 
 .filter-top {
@@ -278,4 +299,53 @@ footer {
 
 .container-footer li {
     font-size: 35px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .container-banner{
+        max-width: 100%;
+    }
+    .home {
+        width: 600px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .section-product {
+        width: 600px;
+    }
+    section {
+        max-width: 100%;
+    }
+
+    .header-ver-productos {
+        width: 500px;
+    }
+    .card {
+        width: 500px;
+        height: 600px;
+    }
+    .aside-filtro {
+        display: none;
+    }
+    footer{
+        max-width: 100%;
+        width: 600px;
+    }
+    .body{
+        display: flex;
+        justify-content: center;
+    }
+    .view{
+        display: none !important;
+    }
+    .header-ver-productos button {
+        display: flex;
+    }
+    .nav{
+        width: 600px;
+
+    }
 }
