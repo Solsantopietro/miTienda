@@ -4,59 +4,79 @@ const textInputFilter = document.querySelector('#filter-name');
 const scoreFilters = document.querySelectorAll(".checkbox-score");
 const buttonClean = document.querySelector(".clean-option")
 
+//BUTTON CLEAN
+
+const cleaner = () => {
+    buttonClean.onclick = () => {
+        for (let productFilter of productFilters) {
+            productFilter.checked = false
+        }
+        for (let scoreFilter of scoreFilters){
+            scoreFilter.checked = false
+        }
+        textInputFilter.value = ""
+        showAllCards()
+
+    }
+}
+
+
+cleaner()
+
+
 // CARDS
 
 const showCard = (card) => {
     card.classList.remove("hidden")
 }
 
-const hideCard = (card) =>{
+const hideCard = (card) => {
     card.classList.add("hidden")
 }
 
-const showAllCards = () =>{
+const showAllCards = () => {
     for (let card of cards) {
         showCard(card)
     }
 }
 
-const filterCards = () =>{
+const filterCards = () => {
     if (thereIsAFilter()) {
-        for(let card of cards) {
+        for (let card of cards) {
             applyFilter(card)
         }
-    }else{
+    } else {
         showAllCards()
     }
 }
 
 // SCORE
 
-const thereIsScoreFilter = () =>{
-    for (let scoreFilter of scoreFilters){
+const thereIsScoreFilter = () => {
+    for (let scoreFilter of scoreFilters) {
         if (scoreFilter.checked) return true
     }
     return false
 }
 
-const pasaFiltroScore = (score) =>{
-    if (thereIsScoreFilter()){
-        for (let scoreFilter of scoreFilters){
-            if (scoreFilter.checked && scoreFilter.value === score){
+const pasaFiltroScore = (score) => {
+    if (thereIsScoreFilter()) {
+        for (let scoreFilter of scoreFilters) {
+            if (scoreFilter.checked && scoreFilter.value === score) {
                 return true
             }
         }
         return false
-    }else{
+    } else {
         return true
     }
 }
 
 // PRODUCT FILTER
 
-const thereIsAProductFilter = () =>{
-    for (let productFilter of productFilters){
-        if (productFilter.checked){
+const thereIsAProductFilter = () => {
+    for (let productFilter of productFilters) {
+        if (productFilter.checked) {
             return true
         }
     }
@@ -64,31 +84,31 @@ const thereIsAProductFilter = () =>{
 }
 
 const pasaFiltroDeProductos = (productType) => {
-    if (thereIsAProductFilter()){
-        for (let productFilter of productFilters){
-            if (productFilter.checked && productFilter.value === productType){
+    if (thereIsAProductFilter()) {
+        for (let productFilter of productFilters) {
+            if (productFilter.checked && productFilter.value === productType) {
                 return true
             }
         }
         return false
-    }else{
-        return true 
+    } else {
+        return true
     }
 }
 
 // TEXT FILTER
 
-const thereIsTextFilter = () =>{
+const thereIsTextFilter = () => {
     return (textInputFilter.value !== "")
 }
 
-const pasaFiltroDeTexto = (productName)=> {
-    if (thereIsTextFilter()){
-        if (productName.includes(textInputFilter.value.toLowerCase())){
+const pasaFiltroDeTexto = (productName) => {
+    if (thereIsTextFilter()) {
+        if (productName.includes(textInputFilter.value.toLowerCase())) {
             return true
         }
         return false
-    }else{
+    } else {
         return true
     }
 }
@@ -96,9 +116,9 @@ const pasaFiltroDeTexto = (productName)=> {
 // GENERAL
 
 const applyFilter = (card) => {
-    if (pasaFiltroScore(card.dataset.score) && pasaFiltroDeProductos(card.dataset.type) && pasaFiltroDeTexto(card.dataset.name)){
+    if (pasaFiltroScore(card.dataset.score) && pasaFiltroDeProductos(card.dataset.type) && pasaFiltroDeTexto(card.dataset.name)) {
         showCard(card)
-    }else{
+    } else {
         hideCard(card)
     }
 }
@@ -107,21 +127,21 @@ const thereIsAFilter = () => {
     return thereIsScoreFilter && thereIsAProductFilter && thereIsTextFilter
 }
 
-const initialize = () =>{
+const initialize = () => {
     showAllCards()
     console.log("initializing score filters")
-    for (let scoreFilter of scoreFilters){
+    for (let scoreFilter of scoreFilters) {
         scoreFilter.oninput = () => {
             filterCards()
         }
     }
-    for (let productFilter of productFilters){
-        productFilter.oninput = () =>{
+    for (let productFilter of productFilters) {
+        productFilter.oninput = () => {
             filterCards()
         }
     }
-    textInputFilter.oninput = () =>{
-            filterCards()
+    textInputFilter.oninput = () => {
+        filterCards()
     }
 }
 
