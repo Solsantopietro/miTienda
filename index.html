@@ -18,7 +18,7 @@
         </div>
         <div class="cart-button">
             <i class="fas fa-shopping-cart"></i>
-            <button class="cart">Carrito</button>
+            <button class="cart">Carrito<span>(0 items)</span></button>
         </div>
     </nav>
     <header class="image-header">
@@ -49,16 +49,20 @@
                         <h3>CATEGORIA</h3>
                         <div class="container-checkbox">
                             <label for="">
-                                <input type="checkbox" name="category" class="checkbox-product" value="notebook" /> NETBOOK
+                                <input type="checkbox" name="category" class="checkbox-product" value="notebook" />
+                                NETBOOK
                             </label>
                             <label for="">
-                                <input type="checkbox" name="category" class="checkbox-product" value="phone" /> CELULARES
+                                <input type="checkbox" name="category" class="checkbox-product" value="phone" />
+                                CELULARES
                             </label>
                             <label for="">
-                                <input type="checkbox" name="category" class="checkbox-product" value="console" /> CONSOLAS
+                                <input type="checkbox" name="category" class="checkbox-product" value="console" />
+                                CONSOLAS
                             </label>
                             <label for="">
-                                <input type="checkbox" name="category" class="checkbox-product" value="accesory" /> ACESORIOS
+                                <input type="checkbox" name="category" class="checkbox-product" value="accesory" />
+                                ACESORIOS
                             </label>
                             <label for="">
                                 <input type="checkbox" name="category" class="checkbox-product" value="tablet" /> TABLET
@@ -131,19 +135,19 @@
         </div>
         <section>
             <div class="header-ver-productos">
-                <p>Mostrando 12 prodcutos</p>
-                <button class="">
+                <p>Mostrando <span>12</span> productos</p>
+                <button class="button-filter">
                     <i class="fas fa-filter"></i>
                     <p>Filtro</p>
                 </button>
                 <div class="view">
                     <p>Ver como</p>
-                    <i class="fas fa-th"></i>
-                    <i class="fas fa-list"></i>
+                    <button onclick="buttonGrid()" class="iconView"><i class="fas fa-th"></i></button>
+                    <button onclick="buttonList()" class="iconView"><i class="fas fa-list"></i></button>
                 </div>
             </div>
             <div class="section-product">
-                <div class="container-product">
+                <div class="container-product-grid ">
                     <div class="card hidden" data-name="celular xiaomi" data-type="phone" data-score="5">
                         <div class="img-container">
                             <img class="image-product" src="./imagenes-de-productos/celularXiaomi.jpg">
@@ -151,13 +155,13 @@
                         <div class="product">
                             <h3>Celular Xiaomi</h3>
                             <p>$9999</p>
-                                <div class="score-icons">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
+                            <div class="score-icons">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                             <button>COMPRAR</button>
                         </div>
                     </div>
@@ -168,13 +172,13 @@
                         <div class="product">
                             <h3>PlayStation 4</h3>
                             <p>$9999</p>
-                                <div class="score-icons">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
+                            <div class="score-icons">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                             <button>COMPRAR</button>
                         </div>
                     </div>
@@ -185,13 +189,13 @@
                         <div class="product">
                             <h3>Camara Nikon</h3>
                             <p>$9999</p>
-                                <div class="score-icons">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
+                            <div class="score-icons">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
                             <button>COMPRAR</button>
                         </div>
                     </div>
@@ -202,13 +206,13 @@
                         <div class="product">
                             <h3>Headphones Sony</h3>
                             <p>$9999</p>
-                                <div class="score-icons">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
+                            <div class="score-icons">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
                             <button>COMPRAR</button>
                         </div>
                     </div>
@@ -219,13 +223,13 @@
                         <div class="product">
                             <h3>Nintendo Switch</h3>
                             <p>$9999</p>
-                                <div class="score-icons">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
+                            <div class="score-icons">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                             <button>COMPRAR</button>
                         </div>
                     </div>
@@ -236,13 +240,13 @@
                         <div class="product">
                             <h3>Notebook Asus</h3>
                             <p>$9999</p>
-                                <div class="score-icons">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
+                            <div class="score-icons">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
                             <button>COMPRAR</button>
                         </div>
                     </div>
@@ -253,15 +257,15 @@
                         <div class="product">
                             <h3>Notebook MSI</h3>
                             <p>$9999</p>
-                                <div class="score-icons">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
+                            <div class="score-icons">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <button>COMPRAR</button>
                         </div>
-                        <button>COMPRAR</button>
                     </div>
                     <div class="card hidden" data-name="macbook" data-type="notebook" data-score="5">
                         <div class="img-container">
@@ -270,13 +274,13 @@
                         <div class="product">
                             <h3>MacBook</h3>
                             <p>$9999</p>
-                                <div class="score-icons">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
+                            <div class="score-icons">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                             <button>COMPRAR</button>
                         </div>
                     </div>
@@ -287,13 +291,13 @@
                         <div class="product">
                             <h3>Headshot philips</h3>
                             <p>$9999</p>
-                                <div class="score-icons">
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
+                            <div class="score-icons">
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
                             <button>COMPRAR</button>
                         </div>
                     </div>
@@ -304,13 +308,13 @@
                         <div class="product">
                             <h3>Iphone X</h3>
                             <p>$9999</p>
-                                <div class="score-icons">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
+                            <div class="score-icons">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                             <button>COMPRAR</button>
                         </div>
                     </div>
@@ -322,13 +326,13 @@
                         <div class="product">
                             <h3>Xbox One</h3>
                             <p>$9999</p>
-                                <div class="score-icons">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
+                            <div class="score-icons">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
                             <button>COMPRAR</button>
                         </div>
                     </div>
@@ -340,13 +344,13 @@
                         <div class="product">
                             <h3>Mouse Gamer</h3>
                             <p>$9999</p>
-                                <div class="score-icons">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
+                            <div class="score-icons">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
                             <button class="buttom-buy">COMPRAR</button>
                         </div>
                     </div>

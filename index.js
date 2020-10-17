@@ -2,7 +2,25 @@ const cards = document.querySelectorAll('.card');
 const productFilters = document.querySelectorAll('.checkbox-product');
 const textInputFilter = document.querySelector('#filter-name');
 const scoreFilters = document.querySelectorAll(".checkbox-score");
-const buttonClean = document.querySelector(".clean-option")
+const buttonClean = document.querySelector(".clean-option");
+const viewGrid = document.querySelector(".iconGrid")
+
+// VER COMO LISTA
+
+function buttonList () {
+    for (let card of cards) {
+        card.classList.add("cardList")
+        card.classList.remove("card")
+    }
+
+}
+function buttonGrid () {
+    for (let card of cards) {
+        card.classList.add("card")
+        card.classList.remove("cardList")
+    }
+
+}
 
 //BUTTON CLEAN
 
