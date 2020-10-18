@@ -5,7 +5,32 @@ const scoreFilters = document.querySelectorAll(".checkbox-score");
 const buttonClean = document.querySelector(".clean-option");
 const viewGrid = document.querySelector(".iconGrid")
 const productText = document.querySelectorAll(".product-text")
+const buttonFilters = document.querySelector(".iconFilter")
+const filter = document.querySelector(".sector-filtro")
+const buttonClose = document.querySelector(".close-filters")
 
+
+//BOTON DE FILTRO
+
+const filterPress = () => {
+    buttonFilters.onclick = () => {
+        filter.classList.add("filters-open")
+    }
+}
+
+filterPress()
+
+//BOTON CERRAR FILTROS
+
+const filterClose = () => {
+    buttonClose.onclick = () =>{
+        filter.classList.remove("filters-open")
+
+    }
+}
+
+filterClose()
+ 
 // VER COMO LISTA
 
 function buttonList () {
