@@ -54,7 +54,7 @@ body {
 .filter {
     /* padding-left: 10px; */
     background-color: #f5f5f5;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .filter label {
@@ -94,10 +94,13 @@ body {
 .container-checkbox {
     display: flex;
     flex-direction: column;
+    font-weight: bold;
+
 }
 
 .checkbox-product {
     padding-right: 200px;
+    margin-right: 10px;
 }
 
 .fa-star {
@@ -120,7 +123,6 @@ body {
     display: flex;
     align-content: space-between;
     align-items: center;
-    font-size: 15px;
 }
 
 /* SEGUNDO HEADER  */
@@ -195,11 +197,6 @@ body {
     margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.container-product-list {
-
 }
 
 .score-icons {
@@ -226,7 +223,7 @@ body {
     justify-content: center;
     align-items: center;   
     color: #2e2e31;
-    margin-bottom: 15px;
+    margin: 6px;
 }
 
 .cardList {
@@ -236,6 +233,14 @@ body {
     align-items: flex-start;
     padding: 10px;
     margin: 10px;
+}
+.color-price {
+    color: #546e7a;
+}
+
+.productList {
+    align-items: flex-start !important;
+    padding-left: 10px;
 }
 
 .img-container {
